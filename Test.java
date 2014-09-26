@@ -11,11 +11,28 @@ public class Test {
     System.out.println("isEven(1) should be false, result: " + test.isEven(1));
     System.out.println("isOdd(9) should be true, result: " + test.isOdd(9));
     System.out.println("isOdd(10) should be false, result: " + test.isOdd(10));
-
+    System.out.println("isSubString(Hello World, Hello) should be true, result: " + test.isSubString("Hello World", "Hello"));
+    System.out.println("isSubString(Hello World, Yo) should be false, result: " + test.isSubString("Hello World", "Yo"));
   }
 
 
   public boolean checkForDuplicates(int[] myArray){
+
+    boolean duplicate = false;
+
+    for(int i=0; i< myArray.length; i++){
+
+      for(int j=i; j < myArray.length; j++){
+        if(myArray[i] == myArray[j]){
+          duplicate = true;
+
+        }
+      }
+    }
+    return duplicate;
+  }
+
+  public boolean checkForDuplicatesV2(int[] myArray){
 
     boolean duplicate = false;
 
@@ -33,23 +50,10 @@ public class Test {
     return duplicate;
   }
 
-public boolean checkForDuplicates(int[] myArray){
+  public boolean isSubString(String input1, String input2){
 
-  boolean duplicate = false;
-
-  for(int i=0; i< myArray.length; i++){
-
-    for(int j=0; j < myArray.length; j++){
-
-      if(i!=j){
-        if(myArray[i] == myArray[j]){
-          duplicate = true;
-        }
-      }
-    }
+    return input1.contains(input2);
   }
-  return duplicate;
-}
 
   public boolean isEven(int i){
 
@@ -69,4 +73,8 @@ public boolean checkForDuplicates(int[] myArray){
     }
     return odd;
   }
+
+  public boolean (){
+
+}
 }
