@@ -74,7 +74,4 @@ public class Test {
     return odd;
   }
 
-  public boolean (){
-
-}
 }
